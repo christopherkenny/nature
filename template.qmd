@@ -1,0 +1,73 @@
+---
+title: Quarto Template for Springer Nature
+format:
+  nature-pdf:
+    journal: "sn-nature"
+    keep-tex: true
+author:
+  - name: Author One
+    affiliations:
+      - name: Harvard University
+        id: 1
+        department: Department of Government
+        address: 1737 Cambridge Street
+        city: Cambridge
+        state: MA
+        postal-code: 02138
+      - name: Harvard University
+        id: 2
+        department: Department of Statistics
+        address: 1 Oxford Street
+        city: Cambridge
+        state: MA
+        postal-code: 02138
+    attributes:
+      equal-contributor: true
+  - name: Author Two
+    affiliations:
+      - name: Yale University
+        id: 3
+        department: Department of Political Science
+        address: 115 Prospect Street
+        city: New Haven
+        state: CT
+        postal-code: 06511
+    email: corresponding@email.com
+    attributes:
+      equal-contributor: true
+      corresponding: true
+  - name: Author Three
+    affiliations:
+      - ref: 1
+abstract: |
+  The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.
+keywords: [template, demo]
+bibliography: bibliography.bib  
+---
+
+## Introduction {#sec-intro}
+
+The Introduction section, of referenced text \cite{bib1} expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
+
+Springer Nature does not impose a strict layout as standard however authors are advised to check the individual requirements for the journal they are planning to submit to as there may be journal-level preferences. When preparing your text please also be aware that some stylistic choices are not supported in full text XML (publication version), including coloured font. These will not be replicated in the typeset article if it is accepted. 
+
+## Using this template {#sec-template}
+
+This Quarto template is unofficial and built out of Springer Nature's template. 
+Some examples of commonly used commands and features are listed below, to help you get started.
+
+As seen below, you can mix markdown and Latex with each other, though it's likely best to mostly use markdown.
+
+### Cross Referencing
+
+To reference a figure with example label "plot", use `@fig-plot`. 
+Analogously, to reference a table with example label "data", use `@tbl-data`.
+To reference a section, such as the Introduction (@sec-intro), use `@sec-intro`.
+
+For complete information on cross referencing with Quarto, see <https://quarto.org/docs/authoring/cross-references.html>.
+
+### Citations
+
+Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93].
+
+

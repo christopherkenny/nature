@@ -1,0 +1,25 @@
+title: Nature
+author: Christopher Kenny
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    common:
+      toc: false
+    pdf:
+      include-in-header: header.tex
+      format-resources:
+        - sn-jnl.cls
+        - sn-apacite.bst
+        - sn-aps.bst
+        - sn-basic.bst
+        - sn-chicago.bst
+        - sn-mathphys.bst
+        - sn-nature.bst
+        - sn-vancouver.bst
+      template-partials:
+        - "partials/doc-class.tex"
+        - "partials/title.tex"
+        - "partials/_author.tex"
+        - "partials/_affiliation.tex"
+

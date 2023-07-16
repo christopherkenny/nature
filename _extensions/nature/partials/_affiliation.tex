@@ -1,0 +1,10 @@
+$if(it.department)$\orgdiv{$it.department$}$endif$%
+$if(it.name)$, \orgname{$it.name$}$endif$%
+$if(it.address)$%
+, \orgaddress{\street{$it.address$}
+$if(it.city)$, \city{$it.city$}$endif$%
+$if(it.state)$, \state{$it.state$}$endif$%
+$if(it.postal-code)$, \postcode{$it.postal-code$}$endif$%
+$if(it.country)$, \country{$it.country$}$endif$%
+}
+$endif$

@@ -1,0 +1,13 @@
+\documentclass[
+$if(journal)$
+$else$
+$journal$
+default,
+$endif$
+$if(fontsize)$
+  $fontsize$,
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{sn-jnl}
