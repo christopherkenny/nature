@@ -70,4 +70,35 @@ For complete information on cross referencing with Quarto, see <https://quarto.o
 
 Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93].
 
+# Tables and Figures
+
+To include figures, you can use Quarto syntax.
+
+![An example figure (an empty plot)](fig.eps){#fig-plot}
+
+For both figures and tables, you can use LaTeX syntax if you need additional customizability. 
+
+For example, to use footnotes within a table, you may want to use LaTeX.
+
+\begin{table}[h]
+\caption{LaTeX caption text}\label{tbl-data}%
+\begin{tabular}{@{}llll@{}}
+\toprule
+Column 1 & Column 2  & Column 3 & Column 4\\
+\midrule
+row 1    & data 1   & data 2  & data 3  \\
+row 2    & data 4   & data 5\footnotemark[1]  & data 6  \\
+row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
+\botrule
+\end{tabular}
+\footnotetext{Source: This is an example of table footnote. This is an example of table footnote.}
+\footnotetext[1]{Example for a first table footnote. This is an example of table footnote.}
+\footnotetext[2]{Example for a second table footnote. This is an example of table footnote.}
+\end{table}
+
+# References
+<!-- the pattern below controls the placement of the references -->
+:::{#refs}
+:::
+
 
