@@ -22,4 +22,5 @@ contributes:
         - "partials/title.tex"
         - "partials/_author.tex"
         - "partials/_affiliation.tex"
+        - "partials/before-body.tex"
 

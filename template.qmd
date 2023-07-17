@@ -45,20 +45,20 @@ keywords: [template, demo]
 bibliography: bibliography.bib  
 ---
 
-## Introduction {#sec-intro}
+# Introduction {#sec-intro}
 
-The Introduction section, of referenced text \cite{bib1} expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
+The Introduction section, of referenced text @greenwade93 expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
 
 Springer Nature does not impose a strict layout as standard however authors are advised to check the individual requirements for the journal they are planning to submit to as there may be journal-level preferences. When preparing your text please also be aware that some stylistic choices are not supported in full text XML (publication version), including coloured font. These will not be replicated in the typeset article if it is accepted. 
 
-## Using this template {#sec-template}
+# Using this template {#sec-template}
 
 This Quarto template is unofficial and built out of Springer Nature's template. 
 Some examples of commonly used commands and features are listed below, to help you get started.
 
 As seen below, you can mix markdown and Latex with each other, though it's likely best to mostly use markdown.
 
-### Cross Referencing
+## Cross Referencing
 
 To reference a figure with example label "plot", use `@fig-plot`. 
 Analogously, to reference a table with example label "data", use `@tbl-data`.
@@ -66,7 +66,7 @@ To reference a section, such as the Introduction (@sec-intro), use `@sec-intro`.
 
 For complete information on cross referencing with Quarto, see <https://quarto.org/docs/authoring/cross-references.html>.
 
-### Citations
+## Citations
 
 Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93].
 

@@ -4,12 +4,9 @@ $endif$
 
 % author setup
 $for(by-author)$
-\author$if(by-author.attributes.corresponding)$*$endif$%
-[$if(by-author.affiliations)$$for(by-author.affiliations)$$it.id$$sep$,$endfor$$endif$%
-]{$_author.tex()$}%
-$if(by-author.email)$\email{$by-author.email$}$endif$
-$if(by-author.attributes.equal-contributor)$\equalcont{These authors contributed equally to this work.}$endif$%
-$endfor$
+\author$if(by-author.attributes.corresponding)$*$endif$[$if(by-author.affiliations)$$for(by-author.affiliations)$$it.id$$sep$,$endfor$$endif$]{$_author.tex()$}$if(by-author.email)$
+\email{$by-author.email$}$endif$$if(by-author.attributes.equal-contributor)$
+\equalcont{These authors contributed equally to this work.}$endif$$endfor$
 
 % affil setup
 $for(by-affiliation)$
