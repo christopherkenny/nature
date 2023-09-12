@@ -1,4 +1,5 @@
 *.pdf
+*.eps
 *.png
 *.rproj
 *.Rproj
