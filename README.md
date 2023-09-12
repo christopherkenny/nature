@@ -29,19 +29,19 @@ format:
 ## Options
 
 - `journal`: the Nature subjournal
- - `default`: Default
- - `sn-nature`: Style for submissions to Nature Portfolio journals
- - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
- - `sn-mathphys`: Math and Physical Sciences Reference Style
- - `sn-aps`: American Physical Society (APS) Reference Style
- - `sn-vancouver`: Vancouver Reference Style
- - `sn-apa`: APA Reference Style 
- - `sn-chicago`: Chicago-based Humanities Reference Style
+  - `default`: Default
+  - `sn-nature`: Style for submissions to Nature Portfolio journals
+  - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
+  - `sn-mathphys`: Math and Physical Sciences Reference Style
+  - `sn-aps`: American Physical Society (APS) Reference Style
+  - `sn-vancouver`: Vancouver Reference Style
+  - `sn-apa`: APA-based Social Sciences/Psychology Reference Style
+  - `sn-chicago`: Chicago-based Humanities Reference Style
 - `classoptions`:
- - `iicol`: double column layout, usually used with `journal: default`
- - `Numbered`: Numbered reference style, usually used with `journal: sn-mathphys` or `journal: sn-vancouver`.
- - `referee`: double spaced for first submissions
- - `lineno`: print line numbers in the margin
+  - `iicol`: double column layout, usually used with `journal: default`
+  - `Numbered`: Numbered reference style, usually used with `journal: sn-mathphys` or `journal: sn-vancouver`.
+  - `referee`: double spaced for first submissions
+  - `lineno`: print line numbers in the margin
 
 ## Example
 
@@ -52,5 +52,5 @@ Here is the source code for a minimal sample document: [template.qmd](template.q
 
 ## License
 
-This modifies the Springer Nature journal article template package, available at <https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940>.
+This modifies the Springer Nature journal article template package `sn-jnl.cls` Version 2.1 of April 2023, available from [Springer-Nature](https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940).
 The original template is licensed under the [LaTeX Project Public License 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/). The template within is derived from this and makes modifications to separate into the full document into Quarto "partials". All modifications can be seen in this repo. 
