@@ -29,19 +29,19 @@ format:
 ## Options
 
 - `journal`: the Nature subjournal
- - `default`: Default
- - `sn-nature`: Style for submissions to Nature Portfolio journals
- - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
- - `sn-mathphys`: Math and Physical Sciences Reference Style
- - `sn-aps`: American Physical Society (APS) Reference Style
- - `sn-vancouver`: Vancouver Reference Style
- - `sn-apa`: APA Reference Style 
- - `sn-chicago`: Chicago-based Humanities Reference Style
+  - `default`: Default
+  - `sn-nature`: Style for submissions to Nature Portfolio journals
+  - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
+  - `sn-mathphys`: Math and Physical Sciences Reference Style
+  - `sn-aps`: American Physical Society (APS) Reference Style
+  - `sn-vancouver`: Vancouver Reference Style
+  - `sn-apa`: APA Reference Style 
+  - `sn-chicago`: Chicago-based Humanities Reference Style
 - `classoptions`:
- - `iicol`: double column layout, usually used with `journal: default`
- - `Numbered`: Numbered reference style, usually used with `journal: sn-mathphys` or `journal: sn-vancouver`.
- - `referee`: double spaced for first submissions
- - `lineno`: print line numbers in the margin
+  - `iicol`: double column layout, usually used with `journal: default`
+  - `Numbered`: Numbered reference style, usually used with `journal: sn-mathphys` or `journal: sn-vancouver`.
+  - `referee`: double spaced for first submissions
+  - `lineno`: print line numbers in the margin
 
 ## Example
 
