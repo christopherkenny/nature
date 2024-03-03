@@ -3,6 +3,7 @@ title: Quarto Template for Springer Nature
 format:
   nature-pdf:
     journal: "sn-nature"
+    cite-method: citeproc
     keep-tex: true
 author:
   - name: Author One
