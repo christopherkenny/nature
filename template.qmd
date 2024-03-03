@@ -69,7 +69,7 @@ For complete information on cross referencing with Quarto, see <https://quarto.o
 
 ## Citations
 
-Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93].
+Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93]. If the tex output is to be included in a submission to a preprint server or publisher, the default citation method, `citeproc`, may not always produce bibliographies compatible with the provided `bst` styles. In this case, you can set `cite-method: natbib`. See <https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex>. In this case, you may need to restrict usage to the default bracketed key citation formats supported by pandoc, such as [@greenwade93] or [@greenwade93;@knuth1984texbook]. See <https://pandoc.org/MANUAL.html#citation-syntax>.
 
 # Tables and Figures
 
