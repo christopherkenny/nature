@@ -14,7 +14,8 @@ contributes:
         - sn-aps.bst
         - sn-basic.bst
         - sn-chicago.bst
-        - sn-mathphys.bst
+        - sn-mathphys-ay.bst
+        - sn-mathphys-num.bst
         - sn-nature.bst
         - sn-vancouver.bst
       template-partials:
@@ -23,4 +24,3 @@ contributes:
         - "partials/_author.tex"
         - "partials/_affiliation.tex"
         - "partials/before-body.tex"
-
