@@ -32,7 +32,8 @@ format:
   - `default`: Default
   - `sn-nature`: Style for submissions to Nature Portfolio journals
   - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
-  - `sn-mathphys`: Math and Physical Sciences Reference Style
+  - `sn-mathphys-ay`: Math and Physical Sciences Reference Style (author-year)
+  - `sn-mathphys-num`: Math and Physical Sciences Reference Style (numbered)
   - `sn-aps`: American Physical Society (APS) Reference Style
   - `sn-vancouver`: Vancouver Reference Style
   - `sn-apa`: APA Reference Style 
@@ -42,6 +43,21 @@ format:
   - `Numbered`: Numbered reference style, usually used with `journal: sn-mathphys` or `journal: sn-vancouver`.
   - `referee`: double spaced for first submissions
   - `lineno`: print line numbers in the margin
+
+Since `cite-method: citeproc` is the
+[default](https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex),
+to respect the natbib reference styles, you may need to set `cite-method: natbib`,
+such as:
+
+```yaml
+format:
+  nature-pdf:
+    journal: "sn-mathphys-num"
+    cite-method: natbib
+```
+
+and restrict usage to [pandoc standard](https://pandoc.org/MANUAL.html#citation-syntax)
+references: `[@key01; @key02]`.
 
 ## Example
 
