@@ -30,6 +30,8 @@ HELP_TARGETS_PATTERN ?= test
 help-targets: ## Print commands for all targets matching a given pattern. eval "$(make help-targets HELP_TARGETS_PATTERN=test | sed 's/\x1b\[[0-9;]*m//g')"
 	@make help-sort | awk '{print $$1}' | grep '$(HELP_TARGETS_PATTERN)' | xargs -I {} printf "printf '___\n\n{}:\n\n'\nmake -n {}\nprintf '\n'\n"
 
+
+
 #--------------------------
 ##@ download csl bibliography style files
 #--------------------------
@@ -60,8 +62,22 @@ download-csl-files: ## Download citation style files. Pass FORCE=1 to download e
 			echo "$(style).csl exists. skipping..."; \
 		fi;)
 
+#-----------------
+##@ render article
+#-----------------
+
+DOCUMENT_NAME ?= template
+
 render-latex: ## Render the article via LaTeX
-	quarto render template.qmd --to nature-pdf
+	quarto render $(DOCUMENT_NAME).qmd --to nature-pdf
 
 render: ## Render all article formats including pdf, html, and docx
-	quarto render template.qmd --to all
+	quarto render $(DOCUMENT_NAME).qmd --to all
+
+clean: ## Clean compilation artifacts
+	rm sn-*.{bst,cls} || true
+
+clean-all: ## Clean all files including output files
+clean-all: clean
+	rm $(DOCUMENT_NAME).{tex,pdf,html,docx} || true
+	rm -rf $(DOCUMENT_NAME)_files/
