@@ -2,15 +2,22 @@
 title: Quarto Template for Springer Nature
 format:
   nature-pdf:
+    # natbibstyle is included in the tex file but ignored by pandoc if 
+    # cite-method is not `natbib`.
     natbibstyle: sn-nature
     classoption:
       - lineno
+    # `citeproc` is the pandoc default. Set `cite-method: natbib` if required
+    # to use the bst styles from the upstream template.
     cite-method: citeproc
     keep-tex: true
   html:
     code-fold: true
     html-math-method: katex
   docx: default
+# The `csl` style will be used with LaTeX-based rendering of`nature-pdf`
+# if cite-method is `citeproc`. This is also the default if cite-method
+# is not specified.
 csl: _extensions/nature/csl/springer-basic-author-date.csl
 author:
   - name: Author One
