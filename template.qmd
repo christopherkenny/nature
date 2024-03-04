@@ -2,11 +2,16 @@
 title: Quarto Template for Springer Nature
 format:
   nature-pdf:
-    journal: "sn-nature"
+    journal: sn-nature
     classoption:
       - lineno
     cite-method: citeproc
     keep-tex: true
+  html:
+    code-fold: true
+    html-math-method: katex
+  docx: default
+csl: _extensions/nature/csl/springer-basic-author-date.csl
 author:
   - name: Author One
     affiliations:
@@ -71,7 +76,7 @@ For complete information on cross referencing with Quarto, see <https://quarto.o
 
 ## Citations
 
-Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93]. If the tex output is to be included in a submission to a preprint server or publisher, the default citation method, `citeproc`, may not always produce bibliographies compatible with the provided `bst` styles. In this case, you can set `cite-method: natbib`. See <https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex>. In this case, you may need to restrict usage to the default bracketed key citation formats supported by pandoc, such as [@greenwade93] or [@greenwade93;@knuth1984texbook]. See <https://pandoc.org/MANUAL.html#citation-syntax>.
+Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93]. If the tex output is to be included in a submission to a preprint server or publisher, the default citation method, `citeproc`, may not always produce bibliographies compatible with the provided `bst` styles. In this case, you can set `cite-method: natbib`. See <https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex>. In this case, you may either restrict usage to the default bracketed key citation formats supported by pandoc, such as [@greenwade93] or [@greenwade93;@knuth1984texbook]. Or, use a CSL file, several of which are vendored in [_extensions/nature/csl](./_extensions/nature/csl/). The advantage of the latter is that references will be consistent across html, docx, and pdf outputs. See <https://pandoc.org/MANUAL.html#citation-syntax> for additional details on pandoc citation styles.
 
 # Tables and Figures
 
@@ -103,5 +108,3 @@ row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
 <!-- the pattern below controls the placement of the references -->
 :::{#refs}
 :::
-
-
