@@ -80,4 +80,4 @@ clean: ## Clean compilation artifacts
 clean-all: ## Clean all files including output files
 clean-all: clean
 	rm $(DOCUMENT_NAME).{tex,pdf,html,docx} || true
-	rm -rf $(DOCUMENT_NAME)_files/
+	rm -r $(DOCUMENT_NAME)_files/
