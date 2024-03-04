@@ -46,7 +46,7 @@ format:
 
 Since `cite-method: citeproc` is the
 [default](https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex),
-to respect the natbib reference styles, you may need to set `cite-method: natbib`,
+to respect the natbib reference styles, you would need to set `cite-method: natbib`,
 such as:
 
 ```yaml
@@ -57,7 +57,20 @@ format:
 ```
 
 and restrict usage to [pandoc standard](https://pandoc.org/MANUAL.html#citation-syntax)
-references: `[@key01; @key02]`.
+references: `[@key01; @key02]`. This has the advantage that it will respect the styles
+officially included in the [Springer Nature template][springer-template].
+However it has the disadvantage that the citations will not be consistent with
+html and docx outputs. To achieve this, set
+
+```yaml
+csl: ./path/to/springer-basic-author-date.csl
+```
+
+to a path to a CSL file. Additional CSL style files can be found in the
+[Zotero Style Repository](https://www.zotero.org/styles) and elsewhere.
+This can be done independent from the specification of `cite-method: citeproc` or
+`cite-method: natbib` but the former will lead to consistency of the pdf output
+with html and docx.
 
 ## Example
 
@@ -68,5 +81,7 @@ Here is the source code for a minimal sample document: [template.qmd](template.q
 
 ## License
 
-This modifies the Springer Nature journal article template package, available at <https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940>.
+This modifies the [Springer Nature journal article template package][springer-template], available at <https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940>.
 The original template is licensed under the [LaTeX Project Public License 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/). The template within is derived from this and makes modifications to separate into the full document into Quarto "partials". All modifications can be seen in this repo. 
+
+[springer-template]: https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940
