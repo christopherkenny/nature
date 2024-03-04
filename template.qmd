@@ -2,7 +2,7 @@
 title: Quarto Template for Springer Nature
 format:
   nature-pdf:
-    journal: sn-nature
+    natbibstyle: sn-nature
     classoption:
       - lineno
     cite-method: citeproc
