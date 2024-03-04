@@ -24,11 +24,11 @@ Then, add the format to your document options:
 ```yaml
 format:
   nature-pdf: default
-```    
+```
 
 ## Options
 
-- `journal`: the Nature subjournal
+- `natbibstyle`: the name of the natbib style for the Nature subjournal
   - `default`: Default
   - `sn-nature`: Style for submissions to Nature Portfolio journals
   - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
@@ -39,8 +39,8 @@ format:
   - `sn-apa`: APA Reference Style 
   - `sn-chicago`: Chicago-based Humanities Reference Style
 - `classoption`:
-  - `iicol`: double column layout, usually used with `journal: default`
-  - `Numbered`: Numbered reference style, usually used with `journal: sn-vancouver`.
+  - `iicol`: double column layout, usually used with `natbibstyle: default`
+  - `Numbered`: Numbered reference style, usually used with `natbibstyle: sn-vancouver`.
   - `referee`: double spaced for first submissions
   - `lineno`: print line numbers in the margin
 
@@ -52,7 +52,7 @@ such as:
 ```yaml
 format:
   nature-pdf:
-    journal: "sn-mathphys-num"
+    natbibstyle: sn-mathphys-num
     cite-method: natbib
 ```
 
@@ -66,22 +66,32 @@ html and docx outputs. To achieve this, set
 csl: ./path/to/springer-basic-author-date.csl
 ```
 
-to a path to a CSL file. Additional CSL style files can be found in the
-[Zotero Style Repository](https://www.zotero.org/styles) and elsewhere.
-This can be done independent from the specification of `cite-method: citeproc` or
-`cite-method: natbib` but the former will lead to consistency of the pdf output
-with html and docx.
+to a path to a CSL file. Several are vendered in
+[_extensions/nature/csl/](./_extensions/nature/csl/).
+Additional CSL style files can be found in the
+[citation-style-language/styles](https://github.com/citation-style-language/styles)
+repository, the [recommended](https://citationstyles.org/authors/)
+[Zotero Style Repository](https://www.zotero.org/styles) for downloading these
+styles, and elsewhere. The `csl` parameter can be specified independent of the
+specification of `cite-method: citeproc` or `cite-method: natbib` but the former
+will lead to consistency of the pdf output with html and docx while the latter
+will use the csl file with citeproc for non-LaTeX outputs and natbib for the
+LaTeX-rendered pdf.
 
 ## Example
 
 Here is the source code for a minimal sample document: [template.qmd](template.qmd).
 
 <!-- pdftools::pdf_convert('template.pdf',pages = 1) -->
-![[template.qmd](template.qmd)](template_1.png)
+<div style="width: 100%; text-align: left;">
+  <a href="template.pdf">
+    <img src="template_1.png" width="500" alt="link to template.pdf" style="max-width:100%;height:auto;">
+  </a>
+</div>
 
 ## License
 
-This modifies the [Springer Nature journal article template package][springer-template], available at <https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940>.
-The original template is licensed under the [LaTeX Project Public License 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/). The template within is derived from this and makes modifications to separate into the full document into Quarto "partials". All modifications can be seen in this repo. 
+This modifies the [Springer Nature journal article template package][springer-template].
+The original template is licensed under the [LaTeX Project Public License 1.3c](https://www.latex-project.org/lppl/lppl-1-3c/). The template within is derived from this and makes modifications to separate into the full document into Quarto "partials". All modifications can be seen in this repo.
 
 [springer-template]: https://www.springernature.com/gp/authors/campaigns/latex-author-support/see-where-our-services-will-take-you/18782940
