@@ -40,7 +40,7 @@ format:
   - `sn-chicago`: Chicago-based Humanities Reference Style
 - `classoption`:
   - `iicol`: double column layout, usually used with `journal: default`
-  - `Numbered`: Numbered reference style, usually used with `journal: sn-mathphys` or `journal: sn-vancouver`.
+  - `Numbered`: Numbered reference style, usually used with `journal: sn-vancouver`.
   - `referee`: double spaced for first submissions
   - `lineno`: print line numbers in the margin
 
