@@ -60,8 +60,8 @@ download-csl-files: ## Download citation style files. Pass FORCE=1 to download e
 			echo "$(style).csl exists. skipping..."; \
 		fi;)
 
-render-latex:
+render-latex: ## Render the article via LaTeX
 	quarto render template.qmd --to nature-pdf
 
-render: ## Render the article
+render: ## Render all article formats including pdf, html, and docx
 	quarto render template.qmd --to all
