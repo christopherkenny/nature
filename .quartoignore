@@ -2,3 +2,4 @@
 *.png
 *.rproj
 *.Rproj
+Makefile
