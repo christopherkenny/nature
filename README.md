@@ -72,11 +72,13 @@ Additional CSL style files can be found in the
 [citation-style-language/styles](https://github.com/citation-style-language/styles)
 repository, the [recommended](https://citationstyles.org/authors/)
 [Zotero Style Repository](https://www.zotero.org/styles) for downloading these
-styles, and elsewhere. The `csl` parameter can be specified independent of the
+styles, and elsewhere[^1]. The `csl` parameter can be specified independent of the
 specification of `cite-method: citeproc` or `cite-method: natbib` but the former
 will lead to consistency of the pdf output with html and docx while the latter
 will use the csl file with citeproc for non-LaTeX outputs and natbib for the
 LaTeX-rendered pdf.
+
+[^1]: The vendored Citation Style Language (CSL) files are copyrighted by the [Citation Style Language project](https://citationstyles.org/). These files have not been modified and are redistributed as licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)).
 
 ## Example
 
