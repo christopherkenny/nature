@@ -28,7 +28,7 @@ format:
 
 ## Options
 
-- `natbibstyle`: the name of the natbib style for the Nature subjournal
+- `journal.cite-style`: the name of the natbib style for the Nature subjournal
   - `default`: Default
   - `sn-nature`: Style for submissions to Nature Portfolio journals
   - `sn-basic`: Basic Springer Nature Reference Style/Chemistry Reference Style
@@ -39,8 +39,8 @@ format:
   - `sn-apa`: APA Reference Style 
   - `sn-chicago`: Chicago-based Humanities Reference Style
 - `classoption`:
-  - `iicol`: double column layout, usually used with `natbibstyle: default`
-  - `Numbered`: Numbered reference style, usually used with `natbibstyle: sn-vancouver`.
+  - `iicol`: double column layout, usually used with `journal.cite-style: default`
+  - `Numbered`: Numbered reference style, usually used with `journal.cite-style: sn-vancouver`.
   - `referee`: double spaced for first submissions
   - `lineno`: print line numbers in the margin
 
@@ -52,7 +52,8 @@ such as:
 ```yaml
 format:
   nature-pdf:
-    natbibstyle: sn-mathphys-num
+    journal: 
+      cite-style: sn-mathphys-num
     cite-method: natbib
 ```
 

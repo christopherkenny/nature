@@ -2,9 +2,10 @@
 title: Quarto Template for Springer Nature
 format:
   nature-pdf:
-    # natbibstyle is included in the tex file but ignored by pandoc if 
+    # journal.cite-style is included in the tex file but ignored by pandoc if 
     # cite-method is not `natbib`.
-    natbibstyle: sn-nature
+    journal:
+      cite-style: sn-nature
     classoption:
       - lineno
     # `citeproc` is the pandoc default. Set `cite-method: natbib` if required
