@@ -1,8 +1,8 @@
 \documentclass[
-$if(journal)$
-$journal$
+$if(journal.cite-style)$
+  $journal.cite-style$,
 $else$
-default,
+  default,
 $endif$
 $if(fontsize)$
   $fontsize$,

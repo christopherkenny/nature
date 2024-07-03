@@ -1264,6 +1264,7 @@ FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
   add.comma
+  format.btitle "title" output.check
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
       new.sentence

@@ -2,7 +2,13 @@
 title: Quarto Template for Springer Nature
 format:
   nature-pdf:
-    journal: "sn-nature"
+    # journal.cite-style is included in the tex file but ignored by pandoc if
+    # cite-method is not `natbib`.
+    journal:
+      cite-style: sn-nature
+    # `citeproc` is the pandoc default. Set `cite-method: natbib` if required
+    # to use the bst styles from the upstream template.
+    cite-method: natbib
     keep-tex: true
 author:
   - name: Author One
@@ -47,7 +53,7 @@ bibliography: bibliography.bib
 
 # Introduction {#sec-intro}
 
-The Introduction section, of referenced text @greenwade93 expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
+The Introduction section, of referenced text [@greenwade93] expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
 
 Springer Nature does not impose a strict layout as standard however authors are advised to check the individual requirements for the journal they are planning to submit to as there may be journal-level preferences. When preparing your text please also be aware that some stylistic choices are not supported in full text XML (publication version), including coloured font. These will not be replicated in the typeset article if it is accepted. 
 
@@ -68,7 +74,7 @@ For complete information on cross referencing with Quarto, see <https://quarto.o
 
 ## Citations
 
-Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93] and for a text citation: @greenwade93. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. Drop the author like so [-@greenwade93].
+Quarto formats citations and references automatically using the bibliography records in your `.bib` file. For a citation in parentheses use `[@greenwade93]`. Multiple citations can be given as `[@greenwade93; @knuth1984texbook]`. When rendering with the natbib styles included in this extension, set `cite-method: natbib` and use Pandoc's standard citation syntax.
 
 # Tables and Figures
 
@@ -100,5 +106,3 @@ row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
 <!-- the pattern below controls the placement of the references -->
 :::{#refs}
 :::
-
-

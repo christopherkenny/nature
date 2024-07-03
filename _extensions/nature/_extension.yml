@@ -6,6 +6,7 @@ contributes:
   formats:
     common:
       toc: false
+      biblio-config: false
     pdf:
       include-in-header: header.tex
       format-resources:
@@ -15,6 +16,8 @@ contributes:
         - sn-basic.bst
         - sn-chicago.bst
         - sn-mathphys.bst
+        - sn-mathphys-ay.bst
+        - sn-mathphys-num.bst
         - sn-nature.bst
         - sn-vancouver.bst
       template-partials:
@@ -23,4 +26,3 @@ contributes:
         - "partials/_author.tex"
         - "partials/_affiliation.tex"
         - "partials/before-body.tex"
-

@@ -3,3 +3,15 @@
 .Rdata
 .httr-oauth
 .DS_Store
+/template_files/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+/*.bst
+/*.cls
+template.tex
+*.pdf
+*.png
+!template.pdf
+!template_1.png

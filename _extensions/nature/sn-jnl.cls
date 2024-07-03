@@ -70,13 +70,14 @@
 \newif\if@Numbered@refstyle\global\@Numbered@refstylefalse% Namedate
 
 \newif\if@Spr@basic@refstyle\global\@Spr@basic@refstylefalse% 1.Basic Springer Nature Reference Style/Chemistry Reference Style -> sn-basic.bst
-\newif\if@Mathphys@refstyle\global\@Mathphys@refstylefalse% 2.Math and Physical Sciences Reference Style -> sn-mathphys.bst
+\newif\if@Mathphys@refstyle\global\@Mathphys@refstylefalse% Legacy Math and Physical Sciences Reference Style -> sn-mathphys.bst
+\newif\if@Mathphys@numrefstyle\global\@Mathphys@numrefstylefalse% 2.Math and Physical Sciences Reference Style -> sn-mathphys.bst
+\newif\if@Mathphys@ayrefstyle\global\@Mathphys@ayrefstylefalse% 2.Math and Physical Sciences Reference Style -> sn-mathphys.bst
 \newif\if@APS@refstyle\global\@APS@refstylefalse% 3.American Physical Society (APS) Reference Style -> sn-APS.bst
 \newif\if@Vancouver@refstyle\global\@Vancouver@refstylefalse% 4.Vancouver Reference Style -> sn-vancouver.bst
 \newif\if@APA@refstyle\global\@APA@refstylefalse% 5.APA-based Social Sciences/Psychology Reference Style -> sn-apacite.bst
 \newif\if@Chicago@refstyle\global\@Chicago@refstylefalse% 6.Chicago-based Humanities Reference Style -> sn-chicago.bst
 \newif\if@Standard@Nature@refstyle\global\@Standard@Nature@refstylefalse% 7.Standard Nature Research Style -> sn-nature.bst
-\newif\if@Default@refstyle\global\@Default@refstylefalse% 8. default reference style - no bib/bst required
 
 %% Template Options
 \DeclareOption{a4paper}{\PassOptionsToPackage{a4}{crop}}
@@ -106,12 +107,13 @@
 
 \DeclareOption{sn-basic}{\global\@Spr@basic@refstyletrue}%
 \DeclareOption{sn-mathphys}{\global\@Mathphys@refstyletrue}%
+\DeclareOption{sn-mathphys-num}{\global\@Mathphys@numrefstyletrue}%
+\DeclareOption{sn-mathphys-ay}{\global\@Mathphys@ayrefstyletrue}%
 \DeclareOption{sn-aps}{\global\@APS@refstyletrue}%
 \DeclareOption{sn-vancouver}{\global\@Vancouver@refstyletrue}%
 \DeclareOption{sn-apa}{\global\@APA@refstyletrue}%
 \DeclareOption{sn-chicago}{\global\@Chicago@refstyletrue}%
 \DeclareOption{sn-nature}{\global\@Standard@Nature@refstyletrue}%
-\DeclareOption{default}{\global\@Default@refstyletrue}%
 
 \DeclareOption{Numbered}{\global\@Numbered@refstyletrue}%
 \DeclareOption{NameDate}{\global\@Numbered@refstylefalse}%
@@ -447,7 +449,6 @@
 \newbox\artcatbox%
 
 \AtBeginDocument{\definecolor{artcatboxgray}{cmyk}{0.0,0.0,0.0,0.30}}%
-
 \def\articletype#1{\if!#1!\else\setbox\artcatbox\hbox{\Artcatfont\hskip1mm#1\hskip1mm}\fi%
 \gdef\ArtType{\fboxsep=0pt\colorbox{artcatboxgray}{\vbox to 4mm{\vfil%
               {\raggedright\box\artcatbox}\vfil}}}%
@@ -858,7 +859,7 @@
 
 %\def\printcopyright#1{#1}%%
 
-%\gdef\@copyrighttext{}%
+%\gdef\@copyrighttext{}
 %\gdef\@copyrightyear{\@jyear}%
 
 %\def\copytext#1#2{\gdef\@copyrightyear{#2}\def\@copyrighttext{\begin{minipage}[t]{\textwidth}\footerfont\textcopyright\ #1\ \@copyrightyear\end{minipage}}}
@@ -1665,18 +1666,33 @@
   \setlength{\bibsep}{1em}%
   \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
 \fi%
+
 \if@Mathphys@refstyle%
 \if@Numbered@refstyle%
   \usepackage[numbers,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
 \else%
- \usepackage[authoryear]{natbib}%
+  \usepackage[authoryear]{natbib}%
   \gdef\NumBib{NO}%
 \fi%
   \bibliographystyle{sn-mathphys}%
   \setlength{\bibsep}{1em}%
   \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
 \fi%
+\if@Mathphys@numrefstyle%
+  \usepackage[numbers,sort&compress]{natbib}%
+  \gdef\NumBib{YES}%
+  \bibliographystyle{sn-mathphys-num}%
+  \setlength{\bibsep}{1em}%
+  \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
+\else%
+\if@Mathphys@ayrefstyle%
+ \usepackage[authoryear]{natbib}%
+  \gdef\NumBib{NO}%
+  \bibliographystyle{sn-mathphys-ay}%
+  \setlength{\bibsep}{1em}%
+  \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
+\fi\fi%
 \if@APS@refstyle%
   \usepackage[numbers,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
@@ -1730,12 +1746,6 @@
   \usepackage[numbers,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
   \bibliographystyle{sn-nature}%
-  \setlength{\bibsep}{1em}%
-  \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
-\fi%
-\if@Default@refstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
-  \gdef\NumBib{YES}%
   \setlength{\bibsep}{1em}%
   \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
 \fi%
