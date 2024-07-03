@@ -6,6 +6,7 @@ contributes:
   formats:
     common:
       toc: false
+      biblio-config: false
     pdf:
       include-in-header: header.tex
       format-resources:

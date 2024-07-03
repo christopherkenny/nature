@@ -64,7 +64,7 @@ However it has the disadvantage that the citations will not be consistent with
 html and docx outputs. To achieve this, set
 
 ```yaml
-csl: ./path/to/springer-basic-author-date.csl
+csl: _extensions/christopherkenny/nature/csl/springer-basic-author-date.csl
 ```
 
 to a path to a CSL file. Several are vendered in
@@ -78,6 +78,21 @@ specification of `cite-method: citeproc` or `cite-method: natbib` but the former
 will lead to consistency of the pdf output with html and docx while the latter
 will use the csl file with citeproc for non-LaTeX outputs and natbib for the
 LaTeX-rendered pdf.
+
+To use html or docx outputs, you will need to specify this in the YAML.
+These can be combined with other formats, like below.
+Note that this template does not contribute a `html` or `docx` format itself.
+
+```yaml
+  html:
+    code-fold: true
+    html-math-method: katex
+csl: _extensions/nature/christopherkenny/csl/springer-basic-author-date.csl
+```
+```yaml
+  docx: default
+csl: _extensions/nature/christopherkenny/csl/springer-basic-author-date.csl
+```
 
 [^1]: The vendored Citation Style Language (CSL) files are copyrighted by the [Citation Style Language project](https://citationstyles.org/). These files have not been modified and are redistributed as licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)).
 
