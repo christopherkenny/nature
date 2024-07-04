@@ -10,6 +10,7 @@ format:
     # to use the bst styles from the upstream template.
     cite-method: natbib
     keep-tex: true
+    equal-margins: false
 author:
   - name: Author One
     affiliations:
@@ -106,3 +107,7 @@ row 3    & data 7   & data 8  & data 9\footnotemark[2]  \\
 <!-- the pattern below controls the placement of the references -->
 :::{#refs}
 :::
+
+# Appendix {.appendix}
+
+{{< lipsum 5 >}}

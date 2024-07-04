@@ -43,6 +43,7 @@ format:
   - `Numbered`: Numbered reference style, usually used with `journal.cite-style: sn-vancouver`.
   - `referee`: double spaced for first submissions
   - `lineno`: print line numbers in the margin
+- `equal-margins`: set equal margins on even and odd pages
 
 Since `cite-method: citeproc` is the
 [default](https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex),
