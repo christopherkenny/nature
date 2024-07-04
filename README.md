@@ -43,6 +43,7 @@ format:
   - `Numbered`: numbered reference style
   - `referee`: double-spaced first submission
   - `lineno`: print line numbers in the margin
+  - `equal-margins`: set equal margins on even and odd pages
 Quarto defaults to `cite-method: citeproc`. To use the natbib reference styles included with this extension, set `cite-method: natbib`:
 
 ```yaml

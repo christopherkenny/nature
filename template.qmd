@@ -10,6 +10,7 @@ format:
     # to use the bst styles from the upstream template.
     cite-method: natbib
     keep-tex: true
+    equal-margins: false
 author:
   - name: Author One
     affiliations:
