@@ -11,4 +11,3 @@
 /*.bst
 /*.cls
 template.*
-!template.{qmd,pdf}
