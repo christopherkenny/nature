@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, labeled, reopened]
+
+name: Render
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@c1b50d36cf3c22b3dc7e530bd1b36634e824e545 # v2
+        with:
+          tinytex: true 
+      - name: Render
+        run: |
+          make render
+      - name: Upload artifacts
+        uses: actions/upload-artifact@0b2256b8c012f0828dc542b3febcab082c67f72b # v4
+        with:
+          name: quarto-output-${{ github.ref_name }}-${{ github.sha }}
+          path: "${{ github.workspace }}/template.*"

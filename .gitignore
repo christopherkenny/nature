@@ -11,3 +11,5 @@
 /*.bst
 /*.cls
 template.*
+!template.pdf
+!template.qmd
