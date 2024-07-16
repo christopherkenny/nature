@@ -8,9 +8,25 @@ format:
       cite-style: sn-nature
     # `citeproc` is the pandoc default. Set `cite-method: natbib` if required
     # to use the bst styles from the upstream template.
-    cite-method: natbib
+    cite-method: citeproc
     keep-tex: true
     equal-margins: false
+  html:
+    code-fold: true
+    html-math-method: mathjax
+  docx: default
+# The `csl` style will be used with LaTeX-based rendering of`nature-pdf`
+# if cite-method is `citeproc`. This is also the default if cite-method
+# is not specified.
+#
+# If attempting to render this extension template in an end-user project,
+# where you have executed a command like
+# $ quarto add christopherkenny/nature
+# you will need to modify the csl path to point to the correct location, e.g.
+# csl: _extensions/christopherkenny/nature/csl/springer-basic-author-date.csl
+# where `christopherkenny` will be used as the namespace for the extension.
+# see: https://quarto.org/docs/extensions/distributing.html#github-distribution
+csl: _extensions/nature/csl/springer-basic-brackets-no-et-al.csl
 author:
   - name: Author One
     affiliations:
@@ -75,7 +91,7 @@ For complete information on cross referencing with Quarto, see <https://quarto.o
 
 ## Citations
 
-Quarto formats citations and references automatically using the bibliography records in your .bib file. For a citation in parentheses use [@greenwade93]. Multiple citations can be given as [@greenwade93;@knuth1984texbook]. If the tex output is to be included in a submission to a preprint server or publisher, the default citation method, `citeproc`, may not always produce bibliographies compatible with the provided `bst` styles. In this case, you can set `cite-method: natbib`. See <https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex>. In this case, you may either restrict usage to the default bracketed key citation formats supported by pandoc, such as [@greenwade93] or [@greenwade93;@knuth1984texbook]. Or, use a CSL file, several of which are vendored in [_extensions/nature/csl](https://github.com/christopherkenny/nature/tree/main/_extensions/nature/csl). The advantage of the latter is that references will be consistent across html, docx, and pdf outputs. See <https://pandoc.org/MANUAL.html#citation-syntax> for additional details on pandoc citation styles.
+Quarto formats citations and references automatically using the bibliography records in your .bib file. For a single citation use [@greenwade93]. For multiple citations use [@greenwade93;@knuth1984texbook]. If using an author-date-based citation style, then for a citation in parentheses use `[@greenwade93]` and for a text citation use `@greenwade93`. You can drop the author using `[-@greenwade93]`. If the tex output is to be included in a submission to a preprint server or publisher, the default citation method, `citeproc`, may not always produce bibliographies compatible with the provided `bst` styles. In this case, you can set `cite-method: natbib`. See <https://quarto.org/docs/authoring/footnotes-and-citations.html#sec-biblatex>. In this case, you may either restrict usage to the default bracketed key citation formats supported by pandoc, such as [@greenwade93] or [@greenwade93;@knuth1984texbook]. Or, use a CSL file, several of which are vendored in [_extensions/nature/csl](./_extensions/nature/csl/). The advantage of the latter is that references will be consistent across html, docx, and pdf outputs. See <https://pandoc.org/MANUAL.html#citation-syntax> for additional details on pandoc citation styles.
 
 # Tables and Figures
 
