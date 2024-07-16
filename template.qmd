@@ -97,7 +97,7 @@ Quarto formats citations and references automatically using the bibliography rec
 
 To include figures, you can use Quarto syntax.
 
-![An example figure (an empty plot)](fig.eps){#fig-plot}
+![An example figure (an empty plot)](fig.pdf){#fig-plot}
 
 For both figures and tables, you can use LaTeX syntax if you need additional customizability. 
 
