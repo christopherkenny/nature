@@ -2,4 +2,5 @@
 *.png
 *.rproj
 *.Rproj
+example.qmd
 Makefile
