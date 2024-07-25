@@ -99,12 +99,12 @@ csl: _extensions/nature/christopherkenny/csl/springer-basic-author-date.csl
 
 ## Example
 
-Here is the source code for a minimal sample document: [template.qmd](template.qmd).
+Here is the source code for a minimal sample document: [example.qmd](example.qmd).
 
 <!-- pdftools::pdf_convert('template.pdf',pages = 1) -->
 <div style="width: 100%; text-align: left;">
-  <a href="template.pdf">
-    <img src="template_1.png" width="500" alt="link to template.pdf" style="max-width:100%;height:auto;">
+  <a href="example.pdf">
+    <img src="example_1.png" width="500" alt="link to example.pdf" style="max-width:100%;height:auto;">
   </a>
 </div>
 
