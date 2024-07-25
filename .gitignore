@@ -4,6 +4,7 @@
 .httr-oauth
 .DS_Store
 /template_files/
+/example_files/
 *.aux
 *.fdb_latexmk
 *.fls
@@ -11,4 +12,8 @@
 /*.bst
 /*.cls
 template.*
-!template.{qmd,pdf}
+!template.pdf
+!template.qmd
+example.*
+!example.pdf
+!example.qmd

@@ -66,7 +66,7 @@ download-csl-files: ## Download citation style files. Pass FORCE=1 to download e
 ##@ render article
 #-----------------
 
-DOCUMENT_NAME ?= template
+DOCUMENT_NAME ?= example
 
 render-latex: ## Render the article via LaTeX
 	quarto render $(DOCUMENT_NAME).qmd --to nature-pdf
