@@ -1,6 +1,7 @@
-*.pdf
 *.png
 *.rproj
 *.Rproj
 example.qmd
+example.pdf
+template.pdf
 Makefile
