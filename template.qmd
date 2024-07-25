@@ -26,7 +26,7 @@ format:
 # csl: _extensions/christopherkenny/nature/csl/springer-basic-author-date.csl
 # where `christopherkenny` will be used as the namespace for the extension.
 # see: https://quarto.org/docs/extensions/distributing.html#github-distribution
-csl: _extensions/nature/csl/springer-basic-brackets-no-et-al.csl
+csl: _extensions/christopherkenny/nature/csl/springer-basic-brackets-no-et-al.csl
 author:
   - name: Author One
     affiliations:
