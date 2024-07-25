@@ -88,11 +88,12 @@ Note that this template does not contribute a `html` or `docx` format itself.
   html:
     code-fold: true
     html-math-method: katex
-csl: _extensions/nature/christopherkenny/csl/springer-basic-author-date.csl
+csl: _extensions/christopherkenny/nature/csl/springer-basic-author-date.csl
 ```
+
 ```yaml
   docx: default
-csl: _extensions/nature/christopherkenny/csl/springer-basic-author-date.csl
+csl: _extensions/christopherkenny/nature/csl/springer-basic-author-date.csl
 ```
 
 [^1]: The vendored Citation Style Language (CSL) files are copyrighted by the [Citation Style Language project](https://citationstyles.org/). These files have not been modified and are redistributed as licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)).
