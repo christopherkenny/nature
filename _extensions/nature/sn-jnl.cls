@@ -1731,7 +1731,7 @@
 \fi%
 \if@Chicago@refstyle%
 \if@Numbered@refstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
+  \usepackage[super,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
 \else%
  \usepackage[authoryear]{natbib}%
@@ -1743,7 +1743,7 @@
   \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
 \fi%
 \if@Standard@Nature@refstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
+  \usepackage[super,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
   \bibliographystyle{sn-nature}%
   \setlength{\bibsep}{1em}%
