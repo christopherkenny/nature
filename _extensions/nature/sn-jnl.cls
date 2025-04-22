@@ -1640,7 +1640,7 @@
 
 \if@Spr@basic@refstyle%
 \if@Numbered@refstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
+  \usepackage[super,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
 \else%
  \usepackage[authoryear]{natbib}%
@@ -1652,7 +1652,7 @@
 \fi%
 
 \if@Mathphys@numrefstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
+  \usepackage[super,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
   \bibliographystyle{sn-mathphys-num}%
   \setlength{\bibsep}{1em}%
@@ -1666,7 +1666,7 @@
   \def\bibfont{\reset@font\fontfamily{\rmdefault}\normalsize\selectfont}%
 \fi\fi%
 \if@APS@refstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
+  \usepackage[super,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
   \bibliographystyle{sn-APS}%
   \setlength{\bibsep}{1em}%
@@ -1674,7 +1674,7 @@
 \fi%
 \if@Vancouver@refstyle%
 \if@Numbered@refstyle%
-  \usepackage[numbers,sort&compress]{natbib}%
+  \usepackage[super,sort&compress]{natbib}%
   \gdef\NumBib{YES}%
 \else%
  \usepackage[authoryear]{natbib}%
