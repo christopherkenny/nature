@@ -1053,16 +1053,14 @@ FUNCTION {format.booktitle}
   emphasize
 }
 FUNCTION {format.in.ed.booktitle}
-{  duplicate$ empty$ 'skip$
-    { 
-editor "editor" format.names.ed duplicate$ empty$ 'pop$
-        {  
-format.booktitle swap$
-"(" editor num.names$ #1 > 'bbl.in.editors 'bbl.editor if$  * swap$   ") " *
-          * swap$
-          * }
-      if$ 
-    }  
+{ format.booktitle duplicate$ empty$ 'skip$
+    { editor "editor" format.names.ed duplicate$ empty$ 'pop$
+        { "(" editor num.names$ #1 > 'bbl.editors 'bbl.editor if$ * " " *
+          swap$ * ")" *
+          " " swap$ * *
+        }
+      if$
+    }
   if$
 }
 FUNCTION {empty.misc.check}
@@ -1439,12 +1437,14 @@ FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
 	  new.block
-	  format.editors output
-add.blank
   format.inpro.title "title" output.check
   new.block
   crossref missing$
-    { format.in.ed.booktitle "booktitle" output.check
+    { format.in.ed.booktitle
+      duplicate$ empty$ 'skip$
+        { word.in swap$ * }
+      if$
+      "booktitle" output.check
       format.bvolume output
       format.number.series output
       format.pages output
